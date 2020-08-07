@@ -21,6 +21,7 @@
 		56F72E1F24DCA50E003D7015 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E1C24DCA50E003D7015 /* Color.swift */; };
 		56F72E2524DCC2C4003D7015 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E2424DCC2C4003D7015 /* Gradient.swift */; };
 		56F72E2824DCC49C003D7015 /* ImageBlurredBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E2724DCC49C003D7015 /* ImageBlurredBackground.swift */; };
+		56F72E2A24DCDFDE003D7015 /* FRadioPlayerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E2924DCDFDE003D7015 /* FRadioPlayerWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		56F72E1C24DCA50E003D7015 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		56F72E2424DCC2C4003D7015 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		56F72E2724DCC49C003D7015 /* ImageBlurredBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBlurredBackground.swift; sourceTree = "<group>"; };
+		56F72E2924DCDFDE003D7015 /* FRadioPlayerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRadioPlayerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				566794A624DC93BE006C69DE /* Supporting Files */,
 				5667948D24DC936E006C69DE /* PlazaGoApp.swift */,
 				5667948F24DC936E006C69DE /* ContentView.swift */,
+				56F72E2924DCDFDE003D7015 /* FRadioPlayerWrapper.swift */,
 				5667949124DC936E006C69DE /* Assets.xcassets */,
 				5667949624DC936E006C69DE /* Info.plist */,
 				5667949324DC936E006C69DE /* Preview Content */,
@@ -197,6 +200,7 @@
 				56F72E1E24DCA50E003D7015 /* LinearGradient.swift in Sources */,
 				566794A524DC93AA006C69DE /* FRadioAPI.swift in Sources */,
 				566794A124DC93AA006C69DE /* Station.swift in Sources */,
+				56F72E2A24DCDFDE003D7015 /* FRadioPlayerWrapper.swift in Sources */,
 				5667948E24DC936E006C69DE /* PlazaGoApp.swift in Sources */,
 				566794A424DC93AA006C69DE /* FRadioPlayer.swift in Sources */,
 				566794A324DC93AA006C69DE /* Reachability.swift in Sources */,

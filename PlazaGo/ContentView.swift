@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var player: FRadioPlayer = FRadioPlayer.shared
+    
     var body: some View {
-        let player: FRadioPlayer = FRadioPlayer.shared
-        
-        var album = Image("album")
-        
         GeometryReader { geo in
             ZStack {
                 LinearGradient.background
@@ -47,7 +45,7 @@ struct ContentView: View {
                         
                     }
                     
-                    Text("Please Don't Call")
+                    Text(player.trackName)
                         .font(.title)
                         .foregroundColor(.gray)
                     
@@ -66,7 +64,7 @@ struct ContentView: View {
                         .buttonStyle(SmallSimpleButtonStyle())
                         
                         Button(action: {
-                            print("Play Button Pressed")
+                            player.togglePlaying()
                         }) {
                             Image(systemName: "pause.fill")
                                 .foregroundColor(.white)
@@ -88,6 +86,10 @@ struct ContentView: View {
                 .padding()
             }
             .edgesIgnoringSafeArea(.all)
+            .onAppear {
+                player.radioURL = URL(string: "http://radio.plaza.one/mp3")
+                player.play()
+            }
         }
     }
 }
