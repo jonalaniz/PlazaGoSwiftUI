@@ -128,12 +128,9 @@ import AVFoundation
  FRadioPlayer is a wrapper around AVPlayer to handle internet radio playback.
  */
 
-open class FRadioPlayer: NSObject, ObservableObject {
+open class FRadioPlayer: NSObject {
     
     // MARK: - Properties
-    
-    // Published Properties
-    @Published var trackName = ""
     
     /// Returns the singleton `FRadioPlayer` instance.
     public static let shared = FRadioPlayer()
@@ -218,7 +215,7 @@ open class FRadioPlayer: NSObject, ObservableObject {
     
     // MARK: - Initialization
     
-    private override init() {
+    override init() {
         super.init()
         
         #if !os(macOS)
@@ -382,14 +379,8 @@ open class FRadioPlayer: NSObject, ObservableObject {
         }
     }
     
-    private func timedMetadataDidChange(rawValue: String?) {
+    func timedMetadataDidChange(rawValue: String?) {
         let parts = rawValue?.components(separatedBy: " - ")
-        if let trackNameMetadata = parts?.last {
-            trackName = trackNameMetadata
-        } else {
-            trackName = "not found"
-        }
-        
         delegate?.radioPlayer?(self, metadataDidChange: parts?.first, trackName: parts?.last)
         delegate?.radioPlayer?(self, metadataDidChange: rawValue)
         shouldGetArtwork(for: rawValue, enableArtwork)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var player: FRadioPlayer = FRadioPlayer.shared
+    @ObservedObject var player: SwiftUIRadioPlayer = SwiftUIRadioPlayer()
     
     var body: some View {
         GeometryReader { geo in
@@ -29,7 +29,7 @@ struct ContentView: View {
                     }
                     
                     ZStack {
-                        Image("album")
+                        Image(uiImage: player.album!)
                             .resizable()
                             .scaledToFit()
                             .padding()
@@ -37,7 +37,7 @@ struct ContentView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 50))
                             .modifier(Blurred())
                         
-                        Image("album")
+                        Image(uiImage: player.album!)
                             .resizable()
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -49,7 +49,7 @@ struct ContentView: View {
                         .font(.title)
                         .foregroundColor(.gray)
                     
-                    Text("~ SMOOCH ~")
+                    Text(player.artistName)
                         .foregroundColor(.gray)
                     Spacer()
                     
@@ -86,6 +86,7 @@ struct ContentView: View {
                 .padding()
             }
             .edgesIgnoringSafeArea(.all)
+            
             .onAppear {
                 player.radioURL = URL(string: "http://radio.plaza.one/mp3")
                 player.play()

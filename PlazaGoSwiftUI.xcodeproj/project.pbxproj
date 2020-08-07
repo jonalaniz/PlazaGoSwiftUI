@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5667948A24DC936E006C69DE /* PlazaGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlazaGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5667948A24DC936E006C69DE /* PlazaGoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlazaGoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5667948D24DC936E006C69DE /* PlazaGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlazaGoApp.swift; sourceTree = "<group>"; };
 		5667948F24DC936E006C69DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5667949124DC936E006C69DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		5667948B24DC936E006C69DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5667948A24DC936E006C69DE /* PlazaGo.app */,
+				5667948A24DC936E006C69DE /* PlazaGoSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5667948924DC936E006C69DE /* PlazaGo */ = {
+		5667948924DC936E006C69DE /* PlazaGoSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5667949924DC936E006C69DE /* Build configuration list for PBXNativeTarget "PlazaGo" */;
+			buildConfigurationList = 5667949924DC936E006C69DE /* Build configuration list for PBXNativeTarget "PlazaGoSwiftUI" */;
 			buildPhases = (
 				5667948624DC936E006C69DE /* Sources */,
 				5667948724DC936E006C69DE /* Frameworks */,
@@ -141,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = PlazaGo;
+			name = PlazaGoSwiftUI;
 			productName = PlazaGo;
-			productReference = 5667948A24DC936E006C69DE /* PlazaGo.app */;
+			productReference = 5667948A24DC936E006C69DE /* PlazaGoSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5667948524DC936E006C69DE /* Build configuration list for PBXProject "PlazaGo" */;
+			buildConfigurationList = 5667948524DC936E006C69DE /* Build configuration list for PBXProject "PlazaGoSwiftUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5667948924DC936E006C69DE /* PlazaGo */,
+				5667948924DC936E006C69DE /* PlazaGoSwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -345,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonalaniz.PlazaGo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonalaniz.PlazaGoSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,7 +367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonalaniz.PlazaGo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonalaniz.PlazaGoSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5667948524DC936E006C69DE /* Build configuration list for PBXProject "PlazaGo" */ = {
+		5667948524DC936E006C69DE /* Build configuration list for PBXProject "PlazaGoSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5667949724DC936E006C69DE /* Debug */,
@@ -386,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5667949924DC936E006C69DE /* Build configuration list for PBXNativeTarget "PlazaGo" */ = {
+		5667949924DC936E006C69DE /* Build configuration list for PBXNativeTarget "PlazaGoSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5667949A24DC936E006C69DE /* Debug */,
