@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var player: SwiftUIRadioPlayer = SwiftUIRadioPlayer()
     
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                LinearGradient.background
+                if colorScheme == .dark {
+                    LinearGradient.darkBackground
+                } else {
+                    LinearGradient.lightBackground
+                }
                 
                 VStack {
                     Spacer()
@@ -25,7 +30,8 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                         
                         Text("Nightwave Plaza")
-                            .foregroundColor(.gray)
+                            .fontWeight(.semibold)
+                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
                     }
                     
                     ZStack {
@@ -42,15 +48,26 @@ struct ContentView: View {
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding()
-                        
+                            .animation(.default)
                     }
                     
-                    Text(player.trackName)
-                        .font(.title)
-                        .foregroundColor(.gray)
+                    if player.trackName != "" {
+                        Text(player.trackName)
+                            .font(.title)
+                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
+                            .multilineTextAlignment(.center)
+                            .transition(.slide)
+                            .animation(.default)
+                    }
                     
-                    Text(player.artistName)
-                        .foregroundColor(.gray)
+                    if player.artistName != "" {
+                        Text(player.artistName)
+                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
+                            .multilineTextAlignment(.center)
+                            .transition(.slide)
+                            .animation(.default)
+                    }
+                    
                     Spacer()
                     
                     HStack(spacing: 25) {
@@ -98,5 +115,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
