@@ -17,8 +17,8 @@ struct SimpleButtonStyle: ButtonStyle {
                         .fill(Color.lightBlue)
                     Circle()
                         .fill(Color.lightBlue)
-                        .padding(10)
-                        .offset(y: 20)
+                        .padding(12)
+                        .offset(y: 10)
                         .blur(radius: 20)
                 }
             )
@@ -35,8 +35,8 @@ struct SmallSimpleButtonStyle: ButtonStyle {
                         .fill(Color.lightBlue)
                     Circle()
                         .fill(Color.lightBlue)
-                        .padding(10)
-                        .offset(x: 0, y: 20)
+                        .padding(12)
+                        .offset(x: 0, y: 10)
                         .blur(radius: 20)
                 }
             )

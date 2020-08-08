@@ -18,20 +18,7 @@ open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
     }
     
     override func timedMetadataDidChange(rawValue: String?) {
-        super.timedMetadataDidChange(rawValue: rawValue)
-        
-        let parts = rawValue?.components(separatedBy: " - ")
-        if let unWrappedArtistName = parts?.first {
-            artistName = unWrappedArtistName
-        } else {
-            artistName = ""
-        }
-        
-        if let unWrappedTitle = parts?.last {
-            trackName = unWrappedTitle
-        } else {
-            trackName = ""
-        }
+//        super.timedMetadataDidChange(rawValue: rawValue)
         getSongInfo()
     }
     
@@ -43,12 +30,16 @@ open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
                 return
             }
             
-            guard let data = data else {return}
+            guard let data = data else { return }
             
             do {
                 let jsonData = try JSONDecoder().decode(Stream.self, from: data)
                 DispatchQueue.main.async {
                     self.getArtworkURL(with: jsonData)
+                    
+                    // Get song metadata from PlazaAPI
+                    self.trackName = jsonData.playback?.title ?? "Unknown"
+                    self.artistName = jsonData.playback?.artist ?? "Unknown"
                 }
                 
             } catch let jsonError {

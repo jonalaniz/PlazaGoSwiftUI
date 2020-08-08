@@ -12,5 +12,6 @@ struct Blurred: ViewModifier {
         content
             .offset(y: 30)
             .blur(radius: 20)
+            .opacity(0.5)
     }
 }
