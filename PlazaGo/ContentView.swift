@@ -14,6 +14,7 @@ struct ContentView: View {
         GeometryReader { geo in
             ZStack {
                 LinearGradient.lightBackground
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
@@ -120,8 +121,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .edgesIgnoringSafeArea(.all)
-            
+            //.edgesIgnoringSafeArea(.all)
             .onAppear {
                 player.radioURL = URL(string: "http://radio.plaza.one/mp3")
                 player.play()
