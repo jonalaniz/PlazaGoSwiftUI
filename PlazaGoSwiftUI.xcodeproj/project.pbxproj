@@ -79,7 +79,6 @@
 				566794A624DC93BE006C69DE /* Supporting Files */,
 				5667948D24DC936E006C69DE /* PlazaGoApp.swift */,
 				5667948F24DC936E006C69DE /* ContentView.swift */,
-				56F72E2924DCDFDE003D7015 /* FRadioPlayerWrapper.swift */,
 				5667949124DC936E006C69DE /* Assets.xcassets */,
 				5667949624DC936E006C69DE /* Info.plist */,
 				5667949324DC936E006C69DE /* Preview Content */,
@@ -101,6 +100,7 @@
 				5667949C24DC93AA006C69DE /* Station.swift */,
 				566794A024DC93AA006C69DE /* FRadioAPI.swift */,
 				5667949F24DC93AA006C69DE /* FRadioPlayer.swift */,
+				56F72E2924DCDFDE003D7015 /* FRadioPlayerWrapper.swift */,
 				5667949D24DC93AA006C69DE /* PlazaAPI.swift */,
 				5667949E24DC93AA006C69DE /* Reachability.swift */,
 			);
