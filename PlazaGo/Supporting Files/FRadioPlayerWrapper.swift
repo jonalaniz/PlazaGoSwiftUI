@@ -30,7 +30,7 @@ open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
                 return
             }
             
-            guard let data = data else {return}
+            guard let data = data else { return }
             
             do {
                 let jsonData = try JSONDecoder().decode(Stream.self, from: data)
