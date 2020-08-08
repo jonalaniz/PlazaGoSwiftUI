@@ -8,20 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var player: SwiftUIRadioPlayer = SwiftUIRadioPlayer()
+    @ObservedObject var player: PlazaRadioPlayer = PlazaRadioPlayer()
     
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                if colorScheme == .dark {
-                    LinearGradient.darkBackground
-                } else {
-                    LinearGradient.lightBackground
-                }
+                LinearGradient.lightBackground
                 
                 VStack {
-                    Spacer()
                     
                     HStack {
                         Image("icon")
@@ -31,15 +25,16 @@ struct ContentView: View {
                         
                         Text("Nightwave Plaza")
                             .fontWeight(.semibold)
-                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
+                            .foregroundColor(Color.nuGrey)
                     }
+                    .padding()
                     
                     ZStack {
                         Image(uiImage: player.album!)
                             .resizable()
                             .scaledToFit()
-                            .padding()
-                            .padding()
+                            .padding(.leading)
+                            .padding(.trailing)
                             .clipShape(RoundedRectangle(cornerRadius: 50))
                             .modifier(Blurred())
                         
@@ -47,14 +42,15 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .padding()
+                            .padding(.leading)
+                            .padding(.trailing)
                             .animation(.default)
                     }
                     
                     if player.trackName != "" {
                         Text(player.trackName)
                             .font(.title)
-                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
+                            .foregroundColor(Color.nuGrey)
                             .multilineTextAlignment(.center)
                             .transition(.slide)
                             .animation(.default)
@@ -62,7 +58,7 @@ struct ContentView: View {
                     
                     if player.artistName != "" {
                         Text(player.artistName)
-                            .foregroundColor(colorScheme == .dark ? Color.nuLightGrey : Color.nuGrey)
+                            .foregroundColor(Color.nuGrey)
                             .multilineTextAlignment(.center)
                             .transition(.slide)
                             .animation(.default)
@@ -82,8 +78,9 @@ struct ContentView: View {
                         
                         Button(action: {
                             player.togglePlaying()
+                            player.updateView()
                         }) {
-                            Image(systemName: "pause.fill")
+                            Image(systemName: player.isPlaying ? "pause.fill" : "play.fill")
                                 .foregroundColor(.white)
                         }
                         .buttonStyle(SimpleButtonStyle())
@@ -99,6 +96,21 @@ struct ContentView: View {
                     }
                     
                     Spacer()
+                    
+                    HStack {
+                        Text("Listeners: \(player.listeners)")
+                        
+                        Spacer()
+                        
+                        HStack(spacing: 10) {
+                            Image(systemName: "hand.thumbsup")
+                            Text(player.likes)
+                            Image(systemName: "hand.thumbsdown")
+                            Text(player.haters)
+                        }
+                    }
+                    .foregroundColor(.blue)
+                    .shadow(color: .blue, radius: 20, x: 0, y: 10)
                 }
                 .padding()
             }

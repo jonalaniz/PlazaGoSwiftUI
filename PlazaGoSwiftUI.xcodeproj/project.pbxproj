@@ -16,6 +16,7 @@
 		566794A324DC93AA006C69DE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667949E24DC93AA006C69DE /* Reachability.swift */; };
 		566794A424DC93AA006C69DE /* FRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667949F24DC93AA006C69DE /* FRadioPlayer.swift */; };
 		566794A524DC93AA006C69DE /* FRadioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566794A024DC93AA006C69DE /* FRadioAPI.swift */; };
+		5679372524DF4648002D3605 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679372424DF4648002D3605 /* AboutView.swift */; };
 		56F72E1A24DC9D10003D7015 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E1924DC9D10003D7015 /* ButtonStyles.swift */; };
 		56F72E1E24DCA50E003D7015 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E1B24DCA50E003D7015 /* LinearGradient.swift */; };
 		56F72E1F24DCA50E003D7015 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F72E1C24DCA50E003D7015 /* Color.swift */; };
@@ -36,6 +37,7 @@
 		5667949E24DC93AA006C69DE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5667949F24DC93AA006C69DE /* FRadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioPlayer.swift; sourceTree = "<group>"; };
 		566794A024DC93AA006C69DE /* FRadioAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioAPI.swift; sourceTree = "<group>"; };
+		5679372424DF4648002D3605 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		56F72E1924DC9D10003D7015 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		56F72E1B24DCA50E003D7015 /* LinearGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
 		56F72E1C24DCA50E003D7015 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				566794A624DC93BE006C69DE /* Supporting Files */,
 				5667948D24DC936E006C69DE /* PlazaGoApp.swift */,
 				5667948F24DC936E006C69DE /* ContentView.swift */,
+				5679372424DF4648002D3605 /* AboutView.swift */,
 				5667949124DC936E006C69DE /* Assets.xcassets */,
 				5667949624DC936E006C69DE /* Info.plist */,
 				5667949324DC936E006C69DE /* Preview Content */,
@@ -203,6 +206,7 @@
 				56F72E2A24DCDFDE003D7015 /* FRadioPlayerWrapper.swift in Sources */,
 				5667948E24DC936E006C69DE /* PlazaGoApp.swift in Sources */,
 				566794A424DC93AA006C69DE /* FRadioPlayer.swift in Sources */,
+				5679372524DF4648002D3605 /* AboutView.swift in Sources */,
 				566794A324DC93AA006C69DE /* Reachability.swift in Sources */,
 				566794A224DC93AA006C69DE /* PlazaAPI.swift in Sources */,
 				56F72E1F24DCA50E003D7015 /* Color.swift in Sources */,

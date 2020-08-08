@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
+open class PlazaRadioPlayer: FRadioPlayer, ObservableObject {
     // Published Properties
     @Published var trackName = ""
     @Published var artistName = ""
     @Published var album = UIImage(named: "album")
+    @Published var isPlayerPlaying = false
+    @Published var listeners = ""
+    @Published var likes = ""
+    @Published var haters = ""
     
     override init() {
         super.init()
@@ -20,6 +24,14 @@ open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
     override func timedMetadataDidChange(rawValue: String?) {
 //        super.timedMetadataDidChange(rawValue: rawValue)
         getSongInfo()
+    }
+    
+    open override func togglePlaying() {
+        super.togglePlaying()
+    }
+    
+    func updateView() {
+        self.objectWillChange.send()
     }
     
     func getSongInfo() {
@@ -40,6 +52,9 @@ open class SwiftUIRadioPlayer: FRadioPlayer, ObservableObject {
                     // Get song metadata from PlazaAPI
                     self.trackName = jsonData.playback?.title ?? "Unknown"
                     self.artistName = jsonData.playback?.artist ?? "Unknown"
+                    self.listeners = String(jsonData.listeners ?? 0)
+                    self.likes = String(jsonData.playback?.likes ?? 0)
+                    self.haters = String(jsonData.playback?.hates ?? 0)
                 }
                 
             } catch let jsonError {
