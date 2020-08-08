@@ -46,6 +46,10 @@ struct ContentView: View {
                             .padding(.trailing)
                             .animation(.default)
                     }
+                    .transition(.identity)
+                    .animation(.default)
+                    
+                    Spacer()
                     
                     if player.trackName != "" {
                         Text(player.trackName)
@@ -66,7 +70,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    HStack(spacing: 25) {
+                    HStack(spacing: 30) {
                         Button(action: {
                             print("Play Button Pressed")
                         }) {
@@ -94,6 +98,8 @@ struct ContentView: View {
                         }
                         .buttonStyle(SmallSimpleButtonStyle())
                     }
+                    .transition(.slide)
+                    .animation(.default)
                     
                     Spacer()
                     
